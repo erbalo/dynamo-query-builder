@@ -98,7 +98,7 @@ class QueryBuilder<T>
             FilterExpression = this.filterExpression.ToString(),
             ExpressionAttributeNames = this.expressionAttributeNames,
             ExpressionAttributeValues = this.expressionAttributeValues,
-            Limit = 10
+            Limit = this.limit
         };
 
         var response = await this.dynamoDBClient.QueryAsync(queryRequest);
